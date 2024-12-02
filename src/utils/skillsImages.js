@@ -6,7 +6,7 @@ import mongoDB from '../assets/skills/mongoDB.png';
 import tailwind from '../assets/skills/TAILWIND.png';
 import figma from '../assets/skills/FIGMA.png';
 import sass from '../assets/skills/SASS.png';
-import nodejs from '../assets/skills/nodejs.jpg';
+import nodejs from '../assets/skills/nodejs.png';
 
 export const skillsImage = (skills) => {
   const skillD = skills.toLowerCase(); 

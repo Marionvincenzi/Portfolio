@@ -1,25 +1,25 @@
 import React, { useContext } from 'react';
 import Marquee from "react-fast-marquee";
-import { ThemeContext } from '../../context/ThemeContext';
-import { skillsData } from '../../data/skillsData';
-import { skillsImage } from '../../utils/skillsImages';
+import { ThemeContext } from '../context/ThemeContext';
+import { skillsData } from '../data/skillsData';
+import { skillsImage } from '../utils/skillsImages';
 
 function Skills() {
     const { theme } = useContext(ThemeContext);
 
     const skillBoxStyle = {
-        backgroundColor: theme.primary, // Appliquer la couleur du thème ici pour le fond
+        backgroundColor: theme.primary, 
         boxShadow: `0px 0px 30px ${theme.primary30}`,
     };
 
     return (
         <div 
             id="skills" 
-            className="skills min-h-[60vh] py-10 px-8 sm:px-4 md:px-4 lg:px-8 flex flex-col items-center justify-start"
+            className="skills min-h-[60vh]  sm:px-4 md:px-4 flex flex-col items-center justify-start bg-background-base"
         >
             <div className="skillsHeader flex items-center justify-center mb-14">
                 <h2 className="text-4xl sm:text-3xl md:text-3xl font-bold text-center" style={{ color: theme.primary }}>
-                    Skills
+                    Compétences
                 </h2>
             </div>
 

@@ -1,0 +1,32 @@
+{
+    "fr": {
+      "services": [
+        {
+          "id": 1,
+          "title": "1. Création",
+          "description": "J'ai une sensibilité particulière pour l'UI/UX design."
+        },
+        {
+          "id": 2,
+          "title": "2. Maintenance",
+          "description": "Suivi et mise à jour de votre site. Correction de bugs."
+        },
+        {
+          "id": 3,
+          "title": "3. Développement Web",
+          "description": "Création d'interfaces utilisateur modernes, réactives et optimisées pour une expérience utilisateur fluide."
+        },
+        {
+          "id": 4,
+          "title": "4. Création de site web sur mesure",
+          "description": "Conception et développement de sites web adaptés aux besoins spécifiques de votre entreprise ou projet."
+        },
+        {
+          "id": 5,
+          "title": "5. Optimisation des performances SEO",
+          "description": "Amélioration de la vitesse et du référencement naturel, pour une meilleure visibilité en ligne."
+        }
+      ]
+    }
+  }
+  
