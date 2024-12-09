@@ -1,29 +1,28 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import Marquee from "react-fast-marquee";
-import { ThemeContext } from '../context/ThemeContext';
+import { useTheme } from '../context/ThemeContext';
 import { skillsData } from '../data/skillsData';
 import { skillsImage } from '../utils/skillsImages';
 
 function Skills() {
-    const { theme } = useContext(ThemeContext);
-
-    const skillBoxStyle = {
-        backgroundColor: theme.primary, 
-        boxShadow: `0px 0px 30px ${theme.primary30}`,
-    };
+    const { isInverted } = useTheme();
 
     return (
         <div 
             id="skills" 
-            className="skills min-h-[60vh]  sm:px-4 md:px-4 flex flex-col items-center justify-start bg-background-base"
+            className={`skills min-h-[60vh] sm:px-4 md:px-4 flex flex-col items-center justify-start ${
+                isInverted ? 'bg-nav-dark-brown text-white' : 'bg-background-base text-black'
+            }`}
         >
             <div className="skillsHeader flex items-center justify-center mb-14">
-                <h2 className="text-4xl sm:text-3xl md:text-3xl font-bold text-center" style={{ color: theme.primary }}>
+                <h2 className={`text-4xl sm:text-3xl md:text-3xl font-bold text-center ${
+                    isInverted ? 'text-nav-brown' : 'text-dark-brown'
+                }`}>
                     Compétences
                 </h2>
             </div>
 
-            <div className="skillsContainer w-full mt-14 sm:mt-6 md:mt-6 px-8 sm:px-4 md:px-4 flex items-center justify-center">
+            <div className="skillsContainer w-full mt-14 sm:mt-6 md:mt-6 sm:px-4 md:px-4 flex items-center justify-center">
                 <div className="skill--scroll w-full sm:mx-0 md:mx-0">
                     <Marquee 
                         gradient={false} 
@@ -35,11 +34,24 @@ function Skills() {
                         direction="left"
                     >
                         {skillsData.map((skill, id) => (
-                            <div className="skill--box rounded-lg shadow-lg w-[160px] h-[160px] m-6 flex flex-col items-center justify-center p-6 transform transition-transform duration-300 ease-in-out hover:scale-110" key={id} style={skillBoxStyle}>
-                                <div className="bg-[#846552] p-4 rounded-full">
-                                    <img src={skillsImage(skill)} alt={skill} className="h-12 pointer-events-none" />
+                            <div 
+                                key={id}
+                                className={`skill--box rounded-lg shadow-lg w-[160px] h-[160px] m-6 flex flex-col items-center justify-center transform transition-transform duration-300 ease-in-out hover:scale-110 ${
+                                    isInverted 
+                                        ? 'bg-background-base text-dark-brown' // Cartes claires en mode sombre
+                                        : 'bg-services-color text-nav-brown' // Cartes foncées en mode clair
+                                }`}
+                            >
+                                <div className={`flex items-center justify-center w-16 h-16  bg-transaprent ${
+                                    isInverted 
+                                    ? 'bg-background-base'
+                                    : 'bg-services-color'
+                                }`}>
+                                    <img src={skillsImage(skill)} 
+                                    alt={skill} 
+                                    className="h-full w-full object-contain pointer-events-none bg-transparent" />
                                 </div>
-                                <h3 className="text-center mt-4 text-lg" style={{ color: theme.tertiary }}>
+                                <h3 className="text-center mt-4 text-lg">
                                     {skill}
                                 </h3>
                             </div>

@@ -1,44 +1,73 @@
 import React from 'react';
 import projectsData from "../data/projects.json";
+import { useTheme } from '../context/ThemeContext';
 
 const Projects = () => {
+  const { isInverted } = useTheme();
+
   return (
-    <div className="bg-background-base">
-      <div className="text-center text-3xl font-bold mb-8">Projects</div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+    <div
+      className={`py-12 ${
+        isInverted ? 'bg-nav-dark-brown' : 'bg-background-base'
+      }`}
+    >
+      <h2 className={`text-3xl md:text-4xl font-bold text-center mb-12 ${
+        isInverted ? 'text-nav-brown' : 'text-dark-brown'
+      }`}>
+        Mes projets
+      </h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-y-6 px-4">
         {Array.isArray(projectsData.projects) ? (
           projectsData.projects.map((project) => (
-            <div key={project.id} 
-            className="bg-services-color shadow-lg rounded-lg overflow-hidden transform transition-all duration-300 hover:shadow-x1 hover:scale-105">
+            <div
+              key={project.id}
+              className={`shadow-lg rounded-lg overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:scale-105 w-8/12 mx-auto ${
+                isInverted ? 'bg-background-base' : 'bg-services-color'
+              }`}
+            >
               <img
                 src={`/images/${project.images}`}
                 alt={project.name}
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
-                <h2 className="text-xl font-semibold text-dark-brown mb-2">{project.name}</h2>
-                <p className="text-sm text-technologie mb-4">Technologie: {project.technologie}</p>
-                <p className="text-white mb-4">{project.description}</p>
-                
+                <h2 className={`text-xl font-semibold mb-2 ${
+                  isInverted ? 'text-dark-brown' : 'text-nav-brown'
+                }`}>{project.name}</h2>
+                <p className={`text-sm mb-4 ${
+                  isInverted ? 'text-services-color' : 'text-background-base'
+                }`}>
+                  <strong>Technologie :</strong> {project.technologie}
+                </p>
+                <p className={`mb-4 ${
+                  isInverted ? 'text-nav-dark-brown' : 'text-technologie'
+                }`}>{project.description}</p>
+
                 {/* Conteneur flex pour GitHub et Site Web */}
                 <div className="flex justify-between items-center">
-                  {/* Lien GitHub à gauche */}
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-nav-brown hover:text-dark-brown"
+                    className={`hover:underline ${
+                      isInverted 
+                      ? 'text-brown-dark hover:text-nav-brown' 
+                      : 'text-light-brown hover:text-brown-dark'
+                    }`}
                   >
                     GitHub
                   </a>
-                  
-                  {/* Lien vers le site Web à droite */}
+
                   {project.site && (
                     <a
                       href={project.site}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-nav-brown hover:text-dark-brown"
+                      className={`hover:underline ${
+                        isInverted 
+                        ? 'text-brown-dark hover:text-nav-brown' 
+                        : 'text-light-brown hover:text-brown-dark'
+                      }`}
                     >
                       Site Web
                     </a>
@@ -48,10 +77,10 @@ const Projects = () => {
             </div>
           ))
         ) : (
-          <div>Data is not in expected format</div>
+          <div className="text-center">Les données ne sont pas dans le format attendu</div>
         )}
       </div>
-      </div>
+    </div>
   );
 };
 

@@ -13,8 +13,14 @@ module.exports = {
         'nav-dark-brown': '#432818',
         'background-base': '#C3A995',
         'services-color': '#846552',
-        'technologie':'#BBBBBB'
+        'technologie':'#BBBBBB',
+        "light-brown": '#d2b48c',
+        'brown-dark':'#8b4513',
+        
       
+      },
+      backgroundImage: {
+        'gradient-brown': 'linear-gradient(to bottom, #d2b48c, #8b4513)',
       },
       fontFamily: {
         'calligraphic': ['Parisienne'],

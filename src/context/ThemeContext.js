@@ -1,30 +1,23 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext,useContext ,useState } from 'react';
 
 // Création du contexte
-export const ThemeContext = createContext();
+const ThemeContext = createContext();
 
-function ThemeContextProvider(props) {
-    const [drawerOpen, setDrawerOpen] = useState(false);
+export const ThemeContextProvider = ({ children }) => {
+    const [isInverted, setIsInverted] = useState(false);
 
-    const setHandleDrawer = () => {
-        setDrawerOpen(!drawerOpen);
+    const toggleColors = () => {
+      setIsInverted(!isInverted)
     };
-
-    // Exemple de thème, vous pouvez le personnaliser à votre guise
-    const theme = {
-        primary: "#846552",  // Couleur primaire
-        secondary: "#FAFAFA",  // Exemple de couleur secondaire
-        primary30: "rgba(132, 101, 82, 0.3)",  // Exemple de couleur avec opacité
-        tertiary: "#2C3E50", // Exemple de couleur tertiaire
-    };
-
-    const value = { theme, drawerOpen, setHandleDrawer };
 
     return (
-        <ThemeContext.Provider value={value}>
-            {props.children}
-        </ThemeContext.Provider>
+      <ThemeContext.Provider value={{ isInverted, toggleColors }}>
+        <div className={`${isInverted ? 'bg-nav-dark-brown text-technologie' : 'bg-background-base text-black'} min-h-screen transition-colors duration-300`}>
+          {children}
+        </div>
+      </ThemeContext.Provider>
     );
-}
+  };
+  
 
-export default ThemeContextProvider;
+export const useTheme = () => useContext(ThemeContext) ;
