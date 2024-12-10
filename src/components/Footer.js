@@ -13,7 +13,9 @@ const Footer = () => {
     >
       <div className="container mx-auto flex justify-between items-center">
         {/* Texte à gauche */}
-        <p className="text-xl ">Marion Vincenzi ©</p>
+        <p className={`text-xl ${
+          isInverted ? "text-dark-brown" : "text-technologie" 
+        }`} >Marion Vincenzi ©</p>
 
         {/* Icônes au centre */}
         <div className="flex space-x-4">
@@ -22,7 +24,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             className={
-              isInverted ? "text-white hover:text-blue-400" : "text-gray-800 hover:text-blue-600"}
+              isInverted ? "text-dark-brown hover:text-technologie" : "text-technologie hover:text-dark-brown"}
           >
             <FaLinkedin size={24} />
           </a>
@@ -31,7 +33,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             className={
-              isInverted ? "text-white hover:text-gray-400" : "text-gray-800 hover:text-gray-600"}
+              isInverted ? "text-dark-brown hover:text-technologie" : "text-technologie hover:text-dark-brown"}
           >
             <FaGithub size={24} />
           </a>

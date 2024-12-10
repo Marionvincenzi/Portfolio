@@ -14,7 +14,9 @@ const Navbar = () => {
     </div>
     
     <div className="flex flex-grow justify-center">
-    <div className="flex gap-8 border border-dark-brown rounded-lg px-6 py-3 bg-nav-brown">
+    <div className={`flex gap-8 border border-dark-brown rounded-lg px-6 py-3 ${
+      isInverted ? 'bg-services-color' : 'bg-background-base'
+    }`}>
       <div className="cursor-pointer transition-colors duration-300 hover:text-dark-brown">À propos de moi</div>
       <div className="cursor-pointer transition-colors duration-300 hover:text-dark-brown">Services</div>
       <div className="cursor-pointer transition-colors duration-300 hover:text-dark-brown">Projets</div>

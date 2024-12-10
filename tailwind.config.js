@@ -24,7 +24,16 @@ module.exports = {
       },
       fontFamily: {
         'calligraphic': ['Parisienne'],
-      }
+      },
+      animation: {
+        fall: 'fall linear infinite',
+      },
+      keyframes: {
+        fall: {
+          '0%' : { transform: 'translateY(-10%)', opacity: '1'},
+          '100%' : { transform: 'translateY(110%)', opacity: '0'},
+        },
+      },
     },
   },
   plugins: [],
