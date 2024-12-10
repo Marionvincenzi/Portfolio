@@ -23,7 +23,9 @@ const Contact = () => {
   }, []);
 
   return (
-    <section className= {`flex justify-center w-full mx-0 pt-20 mb-20 px-10 bg-background-base ${
+    <section 
+    id="contact"
+    className= {`flex justify-center w-full mx-0 pt-20 mb-20 px-10 bg-background-base ${
       isInverted ? 'bg-nav-dark-brown' : 'bg-background-base'
     }`}>
       <div className="flex flex-col gap-10 lg:flex-row items-center space-y-8 lg:space-y-0">

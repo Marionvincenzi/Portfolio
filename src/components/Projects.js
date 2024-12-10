@@ -7,6 +7,7 @@ const Projects = () => {
 
   return (
     <div
+    id="projects"
       className={`py-12 ${
         isInverted ? 'bg-nav-dark-brown' : 'bg-background-base'
       }`}

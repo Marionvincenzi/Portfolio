@@ -20,6 +20,7 @@ const App = () => {
       <Projects />
       <Contact />
       <Footer />
+      
     </ThemeContextProvider>
   );
 }
