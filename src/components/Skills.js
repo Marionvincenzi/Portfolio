@@ -10,7 +10,7 @@ function Skills() {
     return (
         <div 
             id="skills" 
-            className={`skills min-h-[60vh] sm:px-4 md:px-4 flex flex-col items-center justify-start ${
+            className={`skills min-h-[60vh]  mt-20 flex flex-col items-center justify-start ${
                 isInverted ? 'bg-nav-dark-brown text-white' : 'bg-background-base text-black'
             }`}
         >
@@ -48,7 +48,7 @@ function Skills() {
                                     : 'bg-services-color'
                                 }`}>
                                     <img src={skillsImage(skill)} 
-                                    alt={skill} 
+                                    alt="" 
                                     className="h-full w-full object-contain pointer-events-none bg-transparent" />
                                 </div>
                                 <h3 className="text-center mt-4 text-lg">

@@ -8,16 +8,23 @@ module.exports = {
     extend: {
       colors: {
         plum: '#DDA0DD', 
-        'nav-brown': '#b08968', 
-        'dark-brown': '#582f0e',
+        'nav-brown': '#DECCC0', 
+        'dark-brown': '#582F0E',
         'nav-dark-brown': '#432818',
-        'background-base': '#C3A995',
-        'services-color': '#846552',
-        'technologie':'#BBBBBB',
+        'background-base': '#DBC9BD',
+        'services-color': '#705043',
+        'technologie':'#F6F4EF',
         "light-brown": '#d2b48c',
-        'brown-dark':'#8b4513',
-        
-      
+        'brown-dark':'#FCFCFC',
+        'title-projet': '#E0CDAE',
+        'technologie-projet': '#F4C6AF',
+        'dark-technologie' : '#4C352F',
+        'dark-link': '#694D21',
+        'link-hover': '#814522',
+
+      },
+      boxShadow: {
+        'text-sahdow': '1px 1px 2px rgba(0, 0, 0, 0.5 )',
       },
       backgroundImage: {
         'gradient-brown': 'linear-gradient(to bottom, #d2b48c, #8b4513)',

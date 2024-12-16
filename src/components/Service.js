@@ -47,7 +47,7 @@ const Service = () => {
                                 {service.title}
                             </h3>
                             <p className={`text-sm text-center ${
-                                isInverted ? 'text-nav-dark-brown' : 'text-background-base'
+                                isInverted ? 'text-nav-dark-brown' : 'text-technologie'
                             }`}>
                                 {service.description}
                             </p>

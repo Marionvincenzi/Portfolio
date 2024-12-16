@@ -6,7 +6,7 @@ import Service from './components/Service';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import {ThemeContextProvider} from './context/ThemeContext';  // Importer le ThemeContextProvider
+import {ThemeContextProvider} from './context/ThemeContext';  
 import './App.css';
 
 const App = () => { 

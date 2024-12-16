@@ -27,16 +27,16 @@ const Projects = () => {
               }`}
             >
               <img
-                src={`/images/${project.images}`}
-                alt={project.name}
+                src={`${process.env.PUBLIC_URL}${project.images}`}
+                alt=""
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
                 <h2 className={`text-xl font-semibold mb-2 ${
-                  isInverted ? 'text-dark-brown' : 'text-nav-brown'
+                  isInverted ? 'text-nav-dark-brown' : 'text-title-projet'
                 }`}>{project.name}</h2>
                 <p className={`text-sm mb-4 ${
-                  isInverted ? 'text-services-color' : 'text-background-base'
+                  isInverted ? 'text-dark-technologie' : 'text-technologie-projet'
                 }`}>
                   <strong>Technologie :</strong> {project.technologie}
                 </p>
@@ -44,7 +44,7 @@ const Projects = () => {
                   isInverted ? 'text-nav-dark-brown' : 'text-technologie'
                 }`}>{project.description}</p>
 
-                {/* Conteneur flex pour GitHub et Site Web */}
+                
                 <div className="flex justify-between items-center">
                   <a
                     href={project.github}
@@ -52,8 +52,8 @@ const Projects = () => {
                     rel="noopener noreferrer"
                     className={`hover:underline ${
                       isInverted 
-                      ? 'text-brown-dark hover:text-nav-brown' 
-                      : 'text-light-brown hover:text-brown-dark'
+                      ? 'text-dark-link hover:text-link-hover' 
+                      : 'text-nav-brown hover:text-brown-dark'
                     }`}
                   >
                     GitHub
@@ -66,8 +66,8 @@ const Projects = () => {
                       rel="noopener noreferrer"
                       className={`hover:underline ${
                         isInverted 
-                        ? 'text-brown-dark hover:text-nav-brown' 
-                        : 'text-light-brown hover:text-brown-dark'
+                        ? 'text-dark-link hover:text-link-hover' 
+                        : 'text-nav-brown hover:text-brown-dark'
                       }`}
                     >
                       Site Web

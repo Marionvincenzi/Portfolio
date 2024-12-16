@@ -5,7 +5,7 @@
                 "id" : 1,
                 "name" : "Argent Bank",
                 "technologie": "React & Redux & NodeJS",
-                "images":"argentbank.webp",
+                "images":"/images/argentbank.webp",
                 "github" :"https://github.com/Marionvincenzi/Argentbank.git",
                 "description":"Création d'une application bancaire avec React" 
             },
@@ -13,7 +13,7 @@
                 "id": 2,
                 "name": "724 EVENTS",
                 "technologie":"React",
-                "images":"724events.webp",
+                "images":"/images/724events.webp",
                 "github":"https://github.com/Marionvincenzi/724EVENTS..git",
                 "description": "Site internet d'une agence événementiel, déboggage du site."
             },
@@ -21,7 +21,7 @@
                 "id": 3,
                 "name":"Nina Carducci",
                 "technologie": "SEO, accessibilité & Lighthouse",
-                "images":"ninacarducci.webp",
+                "images":"/images/ninacarducci.webp",
                 "github":"https://github.com/Marionvincenzi/Nina-Carducci.git",
                 "site":"https://marionvincenzi.github.io/Nina-Carducci/",
                 "description":"Optimisation du référencement du site de Nina Carducci"
@@ -30,7 +30,7 @@
                 "id" :4,
                 "name":"Kasa",
                 "technologie":"React & CRA & SCSS",
-                "images":"kasa.webp",
+                "images":"/images/kasa.webp",
                 "github":"https://github.com/Marionvincenzi/Kasa.git",
                 "description":"Création d'une application web de location immobilière"
             },
@@ -38,7 +38,7 @@
                 "id": 5,
                 "name":"OhMyFood",
                 "technologie":"HTML & CSS",
-                "images":"ohmyfood.webp",
+                "images":"/images/ohmyfood.webp",
                 "github":"https://github.com/Marionvincenzi/Ohmyfood.git",
                 "description":"Développer un site en mobile-first qui répertorie les menus des restaurants"
             },
@@ -46,7 +46,7 @@
                 "id": 6,
                 "name": "Sophie Bluel",
                 "technologie":"HTML & CSS & JavaScript",
-                "images":"sophie-bluel.webp",
+                "images":"/images/sophie-bluel.webp",
                 "github":"https://github.com/Marionvincenzi/Sophie-Bluel.git",
                 "description": "Création d'une page web dynamique pour le site internet d'une architecte d'intérieur"
             }

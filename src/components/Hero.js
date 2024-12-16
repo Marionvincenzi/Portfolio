@@ -7,7 +7,7 @@ const Hero = () => {
 
   return (
     <div
-      className={`relative hero flex items-center justify-center pt-16 ${isInverted ? 'bg-nav-dark-brown' : 'bg-background-base'} h-[600px] w-screen`}
+      className={`relative hero flex flex-col items-center justify-center ${isInverted ? 'bg-nav-dark-brown' : 'bg-background-base'} h-[600px] w-screen pt-16 md:pt-16 pt-8`}
     >
       {/* Conteneur pour la neige, limité uniquement à Hero */}
       <div className="absolute top-0 left-0 w-full h-screen overflow-hidden pointer-events-none z-10">
@@ -25,18 +25,18 @@ const Hero = () => {
         ))}
       </div>
 
-      {/* Image de l'utilisateur */}
+      
       <img
-        className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover shadow-xl mb-12 gap-12 cursor-pointer z-20"
+        className="w-56 h-56 sm:w-72 sm:h-72 md:w-96 md:h-96 lg:w-[400px] lg:h-[400px] rounded-full object-cover shadow-xl mb-8 sm:mb-16 gap-12 cursor-pointer z-20"
         src={photo}
-        alt="Marion"
+        alt=""
         onClick={toggleColors}
       />
 
-      {/* Texte descriptif */}
-      <div className="text-center z-20">
+    
+      <div className="text-center z-20 px-4">
         <p
-          className={`description text-lg text-left md:text-xl leading-relaxed max-w-3xl mx-auto px-4 ${
+          className={`description text-lg text-left md:text-xl leading-relaxed max-w-3xl mx-auto ${
             isInverted ? 'text-nav-brown' : 'text-dark-brown'
           }`}
         >

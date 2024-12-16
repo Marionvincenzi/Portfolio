@@ -23,6 +23,7 @@ const Footer = () => {
             href="https://www.linkedin.com/in/marion-vincenzi-767210215/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Lien vers mon profil LinkedIn"
             className={
               isInverted ? "text-dark-brown hover:text-technologie" : "text-technologie hover:text-dark-brown"}
           >
@@ -32,6 +33,7 @@ const Footer = () => {
             href="https://github.com/Marionvincenzi"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Lien vers mon profil GitHub"
             className={
               isInverted ? "text-dark-brown hover:text-technologie" : "text-technologie hover:text-dark-brown"}
           >
